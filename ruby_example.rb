@@ -1,6 +1,5 @@
 puts "Enter a number you would like to have converted to text:"
-input = gets.chomp
-input = input.to_i
+input = gets.to_i
 
 def englishNumber number
   if number < 0 
@@ -8,6 +7,9 @@ def englishNumber number
   end
   if number == 0
     return 'zero'
+  end
+  if number > 999999999
+    return 'Please choose a smaller number.'
   end
 
  
